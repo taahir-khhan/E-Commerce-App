@@ -1,8 +1,34 @@
 import "./index.css";
+
+import { Route, Routes } from "react-router-dom";
+import { Navbar } from "./components";
+import {
+  About,
+  Cart,
+  Collection,
+  Contact,
+  Home,
+  Login,
+  Orders,
+  PlaceOrder,
+  Products,
+} from "./pages";
+
 function App() {
   return (
-    <div className="text-center font-extrabold my-10 text-3xl">
-      Let's go build some E-commerce Application
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product/:productId" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/orders" element={<Orders />} />
+      </Routes>
     </div>
   );
 }
