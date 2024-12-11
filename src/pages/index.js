@@ -6,7 +6,7 @@ import Home from "./Home";
 import Login from "./Login";
 import Orders from "./Orders";
 import PlaceOrder from "./PlaceOrder";
-import Products from "./Products";
+import Product from "./Product";
 
 export {
   About,
@@ -17,5 +17,5 @@ export {
   Login,
   Orders,
   PlaceOrder,
-  Products,
+  Product,
 };

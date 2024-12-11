@@ -1,12 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { assets } from "../assets/frontend_assets/assets";
 import { shopContext } from "../context/ShopContext";
 
 const SearchBar = () => {
   const { search, setSearch, showSearch, setShowSearch } =
     useContext(shopContext);
+  const [visible, setVisible] = useState(false);
+  const location = useLocation();
 
-  return showSearch ? (
+  useEffect(() => {
+    if (location.pathname.includes("collection")) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  }, [location]);
+
+  return showSearch && visible ? (
     <div className="bg-gray-50 border-t border-b text-center">
       <div className="inline-flex items-center justify-center border border-gray-400 px-6 py-3 mx-4 my-6  rounded-full w-3/4  sm:w-1/2">
         <input

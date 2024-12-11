@@ -11,7 +11,7 @@ import {
   Login,
   Orders,
   PlaceOrder,
-  Products,
+  Product,
 } from "./pages";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <Route path="/collection" element={<Collection />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/product/:productId" element={<Products />} />
+        <Route path="/product/:productId" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/place-order" element={<PlaceOrder />} />
