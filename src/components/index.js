@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import NewsLetterBox from "./NewsLetterBox";
 import OurPolicy from "./OurPolicy";
 import ProductItem from "./ProductItem";
+import RelatedProducts from "./RelatedProducts";
 import SearchBar from "./SearchBar";
 import Title from "./Title";
 
@@ -18,6 +19,7 @@ export {
   NewsLetterBox,
   OurPolicy,
   ProductItem,
+  RelatedProducts,
   SearchBar,
   Title,
 };
