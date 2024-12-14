@@ -29,6 +29,7 @@ const ShopContextProvider = ({ children }) => {
       cartData[itemId][size] = 1;
     }
     setCartItems(cartData);
+    toast.success("Added to Cart");
   };
 
   const getCartCount = () => {
@@ -44,6 +45,9 @@ const ShopContextProvider = ({ children }) => {
   };
 
   const updateQuantity = (itemId, size, quantity) => {
+    if (quantity === 0) {
+      toast.warn("Deleted from cart");
+    }
     let cartData = structuredClone(cartItems);
     cartData[itemId][size] = quantity;
     setCartItems(cartData);
