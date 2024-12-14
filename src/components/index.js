@@ -1,4 +1,5 @@
 import BestSeller from "./BestSeller";
+import CartTotal from "./CartTotal";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import LatestCollection from "./LatestCollection";
@@ -12,6 +13,7 @@ import Title from "./Title";
 
 export {
   BestSeller,
+  CartTotal,
   Footer,
   Hero,
   LatestCollection,

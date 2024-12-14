@@ -7,7 +7,7 @@ import { shopContext } from "../context/ShopContext";
 const Product = () => {
   const { productId } = useParams();
   const [productData, setProductData] = useState(null);
-  const { products, currency } = useContext(shopContext);
+  const { products, currency, addToCart } = useContext(shopContext);
   const [image, setImage] = useState(null);
   const [size, setSize] = useState("");
 
@@ -81,7 +81,10 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <button className="px-8 py-3 bg-black text-white text-sm active:bg-gray-500 transition-colors duration-300 ease-in-out">
+          <button
+            onClick={() => addToCart(productData._id, size)}
+            className="px-8 py-3 bg-black text-white text-sm active:bg-gray-500 transition-colors duration-300 ease-in-out"
+          >
             ADD TO CART
           </button>
           <hr className="mt-8 sm:w-4/5" />

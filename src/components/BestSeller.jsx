@@ -11,7 +11,6 @@ const BestSeller = () => {
       (item) => item.bestseller === true
     );
     setBestSeller(bestSellerProducts);
-    console.log(bestSellerProducts);
   }, []);
 
   return (
