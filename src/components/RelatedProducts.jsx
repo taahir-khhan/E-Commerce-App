@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { shopContext } from "../context/ShopContext";
-import ProductItem from "./ProductItem";
-import Title from "./Title";
+import { ProductItem, Title } from "./index";
 
 const RelatedProducts = ({ category, subCategory }) => {
   const [relatedProduct, setRelatedProduct] = useState([]);
@@ -16,7 +15,8 @@ const RelatedProducts = ({ category, subCategory }) => {
       );
       setRelatedProduct(productCopy.slice(0, 5));
     }
-  }, []);
+  }, [products]);
+
   return (
     <div className="my-20">
       <div className="text-4xl text-center my-5">

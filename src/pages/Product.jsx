@@ -7,31 +7,38 @@ import { shopContext } from "../context/ShopContext";
 const Product = () => {
   const { productId } = useParams();
   const [productData, setProductData] = useState(null);
+  const [loading, setLoading] = useState(true); // Loading state
   const { products, currency, addToCart } = useContext(shopContext);
   const [image, setImage] = useState(null);
   const [size, setSize] = useState("");
 
   const fetchProductData = async () => {
-    products.map((item) => {
-      if (item._id === productId) {
-        setProductData(item);
-        setImage(item.image[0]);
-        return;
+    setLoading(true); // Start loading
+    setTimeout(() => {
+      const selectedProduct = products.find((item) => item._id === productId);
+      if (selectedProduct) {
+        setProductData(selectedProduct);
+        setImage(selectedProduct.image[0]);
       }
-    });
+      setLoading(false);
+    }, 500);
   };
 
   useEffect(() => {
     fetchProductData();
-  }, []);
+  }, [productId]);
 
-  return productData ? (
+  return loading ? (
+    <div className="flex items-center justify-center min-h-[80vh]">
+      <p className="text-lg font-medium">Loading...</p>
+    </div>
+  ) : productData ? (
     <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
       {/* ----------- Product Data ----------- */}
       <div className="flex gap-12 flex-col sm:flex-row">
         {/* ----------- Product Images ----------- */}
         <div className="flex-1 flex flex-col-reverse gap-3 sm:flex-row">
-          <div className="flex flex-row gap-1  sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal w-full sm:w-[18.7%]">
+          <div className="flex flex-row gap-1 sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal w-full sm:w-[18.7%]">
             {productData.image.map((item, idx) => (
               <img
                 src={item}
