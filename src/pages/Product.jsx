@@ -29,7 +29,7 @@ const Product = () => {
   }, [productId]);
 
   return loading ? (
-    <div className="flex items-center justify-center min-h-[80vh]">
+    <div className="flex items-center justify-center min-h-[30vh] sm:min-h-[80vh]">
       <p className="text-lg font-medium">Loading...</p>
     </div>
   ) : productData ? (
