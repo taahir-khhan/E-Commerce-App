@@ -4,9 +4,15 @@ import { CartTotal, Title } from "../components";
 import { shopContext } from "../context/ShopContext";
 
 const Cart = () => {
-  const { products, cartItems, currency, updateQuantity, navigate } =
-    useContext(shopContext);
-  const [cartData, setCartData] = useState([]);
+  const {
+    products,
+    cartItems,
+    currency,
+    updateQuantity,
+    navigate,
+    cartData,
+    setCartData,
+  } = useContext(shopContext);
 
   useEffect(() => {
     const tempData = [];
@@ -23,11 +29,24 @@ const Cart = () => {
     }
     setCartData(tempData);
   }, [cartItems]);
+
   return (
     <div className="border-t pt-10">
       <div className="text-2xl md:text-3xl mb-3">
         <Title text1={"YOUR"} text2={"CART"} />
       </div>
+
+      {cartData.length === 0 && (
+        <div className="flex flex-col items-center justify-center gap-6 h-[35vh]">
+          <p className="text-2xl text-gray-600">Your Cart is Empty</p>
+          <button
+            onClick={() => navigate("/collection")}
+            className="border bg-black text-white px-6 py-3 text-sm"
+          >
+            Shop Here
+          </button>
+        </div>
+      )}
 
       <div>
         {cartData.map((item, idx) => {

@@ -1,9 +1,20 @@
-import React, { useContext } from "react";
+import React, { use, useContext, useEffect, useState } from "react";
 import { Title } from "../components";
 import { shopContext } from "../context/ShopContext";
 
 const Orders = () => {
-  const { products, currency } = useContext(shopContext);
+  const { cartData, products, currency } = useContext(shopContext);
+  const [placeOrderItem, setPlaceOrderItem] = useState([]);
+
+  useEffect(() => {
+    let tempData = [];
+    cartData.map((cartItem) => {
+      tempData = products.filter((pru) => pru._id === cartItem._id);
+      setPlaceOrderItem(tempData);
+    });
+  }, [cartData]);
+  console.log(placeOrderItem);
+
   return (
     <div className="bordet-t mt-16">
       <div className="text-2xl">
@@ -11,7 +22,7 @@ const Orders = () => {
       </div>
 
       <div>
-        {products.slice(1, 4).map((item, idx) => (
+        {placeOrderItem.map((item, idx) => (
           <div
             key={idx}
             className="py-4 border-t border-b text-gray-700 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
