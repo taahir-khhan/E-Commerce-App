@@ -68,13 +68,13 @@ _Confirmation page after successfully placing an order._
 
 The application is fully optimized for mobile devices, ensuring a seamless shopping experience on smaller screens. Here are some screenshots of the mobile UI:
 
-| **Home Page**                                                                       | **Navigation**                                                                           | **Product Page**                                                                      |
-| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| ![Mobile Home Page](./src/screenshots/responsive//Screenshot_20250215-115521~2.png) | ![Mobile Collection Page](./src/screenshots/responsive/Screenshot_20250215-115559~2.png) | ![Mobile Product Page](./src/screenshots/responsive/Screenshot_20250215-115617~2.png) |
+| **Home**                                                   | **Navigation**                                                  | **Collection**                                                         |
+| ---------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![Mobile Home Page](./src/screenshots/responsive/Home.png) | ![Mobile Navigation Page](./src/screenshots/responsive/Nav.png) | ![Mobile Collection Page](./src/screenshots/responsive/Collection.png) |
 
-| **Collection**                                                                | **Sign In**                                                                       |
-| ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| ![Mobile Cart](./src/screenshots/responsive/Screenshot_20250215-115643~2.png) | ![Mobile Checkout](./src/screenshots/responsive/Screenshot_20250215-115714~2.png) |
+| **Search**                                                     | **Product**                                                             | **Cart**                                                      |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Mobile Search Page](./src/screenshots/responsive/Search.png) | ![Mobile Collection Page](./src/screenshots/responsive/ProductPage.png) | ![Mobile Product Page](./src/screenshots/responsive/Cart.png) |
 
 ---
 
