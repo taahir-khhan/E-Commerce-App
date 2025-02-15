@@ -64,6 +64,20 @@ _Confirmation page after successfully placing an order._
 
 ---
 
+## 📱 **Responsive Design (Mobile UI)**
+
+The application is fully optimized for mobile devices, ensuring a seamless shopping experience on smaller screens. Here are some screenshots of the mobile UI:
+
+| **Home Page**                                                                       | **Navigation**                                                                           | **Product Page**                                                                      |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| ![Mobile Home Page](./src/screenshots/responsive//Screenshot_20250215-115521~2.png) | ![Mobile Collection Page](./src/screenshots/responsive/Screenshot_20250215-115559~2.png) | ![Mobile Product Page](./src/screenshots/responsive/Screenshot_20250215-115617~2.png) |
+
+| **Collection**                                                                | **Sign In**                                                                       |
+| ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| ![Mobile Cart](./src/screenshots/responsive/Screenshot_20250215-115643~2.png) | ![Mobile Checkout](./src/screenshots/responsive/Screenshot_20250215-115714~2.png) |
+
+---
+
 ## 🎥 **Video Walkthrough**
 
 Watch the full demo on LinkedIn to see the project in action:  
@@ -78,9 +92,3 @@ Watch the full demo on LinkedIn to see the project in action:
 - **Routing**: React Router
 - **Responsive Design**: Tailwind CSS (Flexbox, Grid)
 - **Deployment**: Vercel
-
----
-
-## 🚀 **Why This Project?**
-
-This E-Commerce Application showcases my ability to build **scalable, user-friendly, and responsive web applications**. It highlights modern development practices, including dynamic filtering, real-time updates, and a seamless user experience.
